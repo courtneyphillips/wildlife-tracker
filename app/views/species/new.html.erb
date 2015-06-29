@@ -1,0 +1,11 @@
+<% content_for(:title, "New Species") %>
+
+<h1>New species for <%= @type.name %></h1>
+
+<%= form_for [@type, @species] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>

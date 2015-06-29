@@ -1,0 +1,14 @@
+<h1><%= @species.name %></h1>
+
+<% if @species.sightings.any? %>
+  <h4>Current <%= @species.name %> sightings:</h4>
+  <ul>
+    <% @species.sightings.each do |sighting| %>
+      <li><%= sighting.latitude %> - <%= sighting.longtitude %></li>
+    <% end %>
+  </ul>
+  <% else %>
+    <p>Add a Sighting</p>
+<% end %>
+
+<%= link_to "Add a Sighting", new_species_sighting_path(@species) %>

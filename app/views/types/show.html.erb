@@ -1,0 +1,10 @@
+<h1><%= @type.name %></h1>
+<ul>
+  <% @type.species.each do |species| %>
+    <li>
+      <%=link_to species.name, type_species_path(@type, species) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a New Species", new_type_species_path(@type) %>

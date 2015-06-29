@@ -1,0 +1,9 @@
+<% content_for(:title, "New Sighting") %>
+
+<%= form_for [@species, @sighting ] do |f| %>
+  <%= f.label :latitude %>
+  <%= f.number_field :latitude %>
+  <%= f.label :longitude %>
+  <%= f.number_field :longtitude %>
+  <%= f.submit %>
+<% end %>
